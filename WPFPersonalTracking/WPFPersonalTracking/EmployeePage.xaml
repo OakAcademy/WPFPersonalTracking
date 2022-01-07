@@ -1,0 +1,55 @@
+﻿<Window x:Class="WPFPersonalTracking.EmployeePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPersonalTracking"
+        mc:Ignorable="d"
+        Title="EmployeePage" Height="540" Icon="/Logo.png" Background="#FF8EAFF7" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontSize="18" FontWeight="Bold" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="UserNo" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Name="txtUserNo" TextWrapping="Wrap" VerticalAlignment="Center" Height="26" Margin="0,0,20,0" PreviewTextInput="txtUserNo_PreviewTextInput"/>
+        <Button x:Name="btnCheck" Content="Check" Grid.Column="2" Margin="10,10,10,10" Click="btnCheck_Click"/>
+        <Label Content="Password" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="4" Name="txtPassword" TextWrapping="Wrap" VerticalAlignment="Center" Height="26" Margin="0,0,20,0"/>
+        <Label Content="Name" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Name="txtName" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="26" Margin="0,0,20,0"/>
+        <Label Content="Surname" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Name="txtSurname" Grid.Column="4" TextWrapping="Wrap" VerticalAlignment="Center" Height="26" Margin="0,0,20,0"/>
+        <Label Content="Image" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Name="txtImage" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Height="26" Margin="0,0,20,0"/>
+        <Button x:Name="btnChoose" Content="Choose" Grid.Column="2" Grid.Row="2" Margin="10,10,10,10" Click="btnChoose_Click"/>
+        <Image x:Name="EmployeeImage" Grid.Row="3" Grid.RowSpan="2"  Grid.Column="3" Grid.ColumnSpan="2" Margin="90,10,90,10"/>
+        <CheckBox x:Name="chisAdmin" Content="isAdmin" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" FlowDirection="RightToLeft"/>
+        <Label Content="Salary" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Name="txtSalary" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Height="26" Margin="0,0,20,0"/>
+        <Label Content="Department" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ComboBox Name="cmbDepartment" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Height="30" Margin="0,0,20,0" SelectionChanged="cmbDepartment_SelectionChanged"/>
+        <Label Content="Position" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ComboBox Name="cmbPosition" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Height="30" Margin="0,0,20,0"/>
+        <Label Content="BirthDay" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <DatePicker Name="picker1" Grid.Row="6" Grid.Column="1" Width="180" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0"/>
+        <Label Content="Adress" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <RichTextBox x:Name="txtAdress" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Width="auto"/>
+        <Button x:Name="btnSave" Content="Save" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" Margin="0,10,0,15" Width="140" Click="btnSave_Click"/>
+        <Button x:Name="btnClose" Content="Close" Grid.Column="3" Grid.Row="8" HorizontalAlignment="Left" Margin="0,10,0,15" Width="140" Click="btnClose_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Department.png" />
+    <None Remove="Employee.png" />
+    <None Remove="Exit.png" />
+    <None Remove="Logo.png" />
+    <None Remove="Logout.png" />
+    <None Remove="Permission.png" />
+    <None Remove="Position.png" />
+    <None Remove="Salary.png" />
+    <None Remove="Task.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Department.png" />
+    <Resource Include="Employee.png" />
+    <Resource Include="Exit.png" />
+    <Resource Include="Logo.png" />
+    <Resource Include="Logout.png" />
+    <Resource Include="Permission.png" />
+    <Resource Include="Position.png" />
+    <Resource Include="Salary.png" />
+    <Resource Include="Task.png" />
+  </ItemGroup>
+
+</Project>

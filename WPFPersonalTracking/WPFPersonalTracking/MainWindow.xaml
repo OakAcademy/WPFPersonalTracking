@@ -1,0 +1,162 @@
+﻿<Window x:Class="WPFPersonalTracking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPersonalTracking"
+        xmlns:views="clr-namespace:WPFPersonalTracking.Views"
+        xmlns:viewmodels="clr-namespace:WPFPersonalTracking.ViewModels"
+        mc:Ignorable="d"
+        Title="WPF Personal Tracking" Name="PersonalMainWindow" Height="540" Width="1200" WindowStartupLocation="CenterScreen" FontSize="24" FontWeight="Bold" Background="#FF8EAFF7" Icon="/Logo.png" ResizeMode="NoResize" Closed="PersonalMainWindow_Closed" Loaded="PersonalMainWindow_Loaded"   >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="/Logo.png" />
+        <ContentControl Content="{Binding}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="8" Height="Auto" FontWeight="Normal" Width="Auto"/>
+        <Label x:Name="lblWindowName" Content="Windows Name" Grid.Column="1" HorizontalAlignment="Center" Margin="212,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <StackPanel Grid.Row="1" Margin="0,2,0,0">
+            <Button Grid.Row="1" Name="btnEmployee" Height="60" Width="250" HorizontalAlignment="Left" Click="btnEmployee_Click">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="EmployeeImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/Employee.png"/>
+                    <TextBlock Text="Employee" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+
+            </Button>
+
+        </StackPanel>
+        <StackPanel Grid.Row="2" Margin="0,2,0,0">
+            <Button Grid.Row="2" Name="btnTask" Height="60" Width="250" HorizontalAlignment="Left" Click="btnTask_Click">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="TaskImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/Task.png"/>
+                    <TextBlock Text="Task" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Margin="0,2,0,0">
+            <Button Grid.Row="3" Name="btnSalary" Height="60" Width="250" HorizontalAlignment="Left" Click="btnSalary_Click">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="SalaryImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/Salary.png"/>
+                    <TextBlock Text="Salary" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Margin="0,2,0,0">
+            <Button Grid.Row="4" Name="btnPermission" Height="60" Width="250" HorizontalAlignment="Left" Click="btnPermission_Click">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="PermissionImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/Permission.png"/>
+                    <TextBlock Text="Permission" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+        <StackPanel x:Name="stackDepartment" Grid.Row="5" Margin="0,2,0,0">
+            <Button Grid.Row="5" Name="btnDepartment" Height="60" Width="250" HorizontalAlignment="Left" Click="btnDepartment_Click">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="DpImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/Department.png"/>
+                    <TextBlock Text="Department" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+        <StackPanel x:Name="stackPosition" Grid.Row="6" Margin="0,2,0,0">
+            <Button Grid.Row="6" Name="btnPosition" Height="60" Width="250" HorizontalAlignment="Left" Click="btnPosition_Click">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="PositionImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/Position.png"/>
+                    <TextBlock Text="Position" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </StackPanel >
+        <StackPanel x:Name="stacklogoff" Grid.Row="7" Margin="0,2,0,0">
+            <Button Grid.Row="7" Name="btnLogOut" Height="60" Width="250" HorizontalAlignment="Left" Click="btnLogOut_Click">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="LogoutImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/Logout.png"/>
+                    <TextBlock Text="Log Out" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+        <StackPanel x:Name="stackexit" Grid.Row="8" Margin="0,2,0,0">
+            <Button Grid.Row="8" Name="btnExit" Height="60" Width="250" HorizontalAlignment="Left">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="ExitImage" HorizontalAlignment="Left" Height="auto" Width="73" Margin="0,0,0,0" Source="/Exit.png"/>
+                    <TextBlock Text="Exit" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </StackPanel>
+    </Grid>
+    <Window.Resources>
+        <DataTemplate x:Name="DepartmentTemplate" DataType="{x:Type viewmodels:DepartmentViewModel}">
+            <views:DepartmentList>
+
+            </views:DepartmentList>
+        </DataTemplate>
+        <DataTemplate x:Name="PositionTemplate" DataType="{x:Type viewmodels:PositionViewModel}">
+            <views:PositionList>
+                
+            </views:PositionList>            
+        </DataTemplate>
+        <DataTemplate x:Name="Employeetemplate" DataType="{x:Type viewmodels:EmployeeViewModel}">
+            <views:EmployeeListView>
+                
+            </views:EmployeeListView>
+        </DataTemplate>
+        <DataTemplate x:Name="TaskTemplate" DataType="{x:Type viewmodels:TaskViewModel}">
+            <views:TaskList>
+                
+            </views:TaskList>
+        </DataTemplate>
+        <DataTemplate x:Name="salarytemplate" DataType="{x:Type viewmodels:SalaryViewModel}">
+            <views:SalaryList>
+                
+            </views:SalaryList>
+        </DataTemplate>
+        <DataTemplate x:Name="Permissiontemplate" DataType="{x:Type viewmodels:PermissionViewModel}">
+            <views:PermissionList>
+                
+            </views:PermissionList>
+        </DataTemplate>
+    </Window.Resources>
+
+</Window>
